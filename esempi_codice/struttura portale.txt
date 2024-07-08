@@ -1,0 +1,27 @@
+- - - Home Page - - -
+
+Logo: logo ed immagine di benvenuto in evidenza della squadra.
+News e Live: La sezione delle notizie e degli aggiornamenti dovrebbe essere posizionata in alto per mantenere i tifosi informati sugli ultimi eventi.
+Token: Informazioni e FAQ oltre ad accesso lista token ed NFT disponibili.
+Supporto: sezione completamente dedicata al supporto attivo della squadra tramite donazioni
+Login: Accesso area personale collegata al wallet del tifoso (con combinazione di possibilità di registrazione).
+
+
+
+--- --- ---> Token:
+
+Descrizione dei Fan Token: Informazioni su cosa sono i fan token e i benefici del loro possesso.
+Guida all'Acquisto: Istruzioni passo-passo su come acquistare i token tramite SupporterZ in blockchain Solana ed info per i nuovi utenti.
+Acquisto: Interfaccia per acquistare direttamente i token.
+Descrizione: Questa pagina dovrebbe spiegare chiaramente cosa sono i fan token, i loro benefici e come possono essere utilizzati. 
+
+--- --- ---> Login: 
+
+Wallet: Saldo personale, possibilità di acquisto e ricarica, badge e lista token / NFT, info utente
+Impostazioni: Opzioni per gestire le preferenze dell'account e la sicurezza.
+Shop: Prodotti disponibili "stile catalogo" e possibilità di acquisto
+Carrello e logout: Sezione per visualizzare e modificare i prodotti selezionati prima dell'acquisto.
+Votazione: Elenco delle proposte su cui i tifosi possono votare (ad esempio, design della nuova maglia, scelta del prossimo inno).
+Storico: Risultati delle votazioni passate.
+Guida: Istruzioni su come partecipare alle votazioni utilizzando i fan token.
+

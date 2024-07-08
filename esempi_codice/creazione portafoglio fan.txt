@@ -1,0 +1,7 @@
+// esempio di come creare un wallet di un fan
+
+import { Keypair } from "@solana/web3.js";
+
+const fanKeypair = Keypair.generate();
+console.log(`Indirizzo del fan: ${fanKeypair.publicKey.toBase58()}`);
+console.log(`Chiave privata del fan: ${Buffer.from(fanKeypair.secretKey).toString('base64')}`);

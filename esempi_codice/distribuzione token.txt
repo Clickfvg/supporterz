@@ -1,0 +1,45 @@
+// distribuire i token ai fan tramite vari metodi come eventi, acquisti di merchandise, o partecipazione ad attività.
+
+import { Keypair, Connection, PublicKey, Transaction, SystemProgram } from "@solana/web3.js";
+import { getOrCreateAssociatedTokenAccount, transfer, createTransferInstruction } from "@solana/spl-token";
+import wallet from "./xyz_supporterz-wallet.json";
+
+// Configura la connessione
+const connection = new Connection("https://api.devnet.solana.com", "finalized");
+
+// Importa la keypair del proprietario del token
+const keypair = Keypair.fromSecretKey(new Uint8Array(wallet));
+
+// Indirizzo del token
+const MINT_ADDRESS = new PublicKey("YOUR_TOKEN_MINT_ADDRESS");
+
+// Indirizzo del fan a cui trasferire i token
+const FAN_ADDRESS = new PublicKey("FAN_WALLET_ADDRESS");
+
+(async () => {
+  try {
+    // Crea o ottieni l'account associato per il fan
+    const fanTokenAccount = await getOrCreateAssociatedTokenAccount(
+      connection,
+      keypair,
+      MINT_ADDRESS,
+      FAN_ADDRESS
+    );
+
+    // Crea una transazione per trasferire i token
+    const transaction = new Transaction().add(
+      createTransferInstruction(
+        keypair.publicKey,
+        fanTokenAccount.address,
+        keypair.publicKey,
+        100 // Numero di token da trasferire
+      )
+    );
+
+    // Invia la transazione
+    const signature = await connection.sendTransaction(transaction, [keypair]);
+    console.log(`Transazione inviata: https://explorer.solana.com/tx/${signature}?cluster=devnet`);
+  } catch (error) {
+    console.error(error);
+  }
+})();
